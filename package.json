@@ -1,0 +1,26 @@
+{
+  "name": "fizzbuzz",
+  "version": "1.0.0",
+  "description": "FizzBuzz kata",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  },
+  "scripts": {
+    "test": "mocha --inspect-brk --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jmotos/FizzBuzz.git"
+  },
+  "author": "Jorge Motos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jmotos/FizzBuzz/issues"
+  },
+  "homepage": "https://github.com/Jmotos/FizzBuzz#readme"
+}

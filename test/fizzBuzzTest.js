@@ -18,7 +18,7 @@ describe('Unit Test battery of FizzBuzz', () => {
         result.should.be.eql(expected);
         done();
     });
-    itParam('when ${value} return Buzz', [15], (done, value) => {
+    itParam('when ${value} return Buzz', [15, 30, 45], (done, value) => {
         let result = fizzBuzz.run(value),
             expected = 'FizzBuzz';
         result.should.be.eql(expected);

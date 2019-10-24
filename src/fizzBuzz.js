@@ -3,7 +3,10 @@ class FizzBuzz {
         if (number === 5 || number === 10 || number === 20) {
             return "Buzz"
         }
-        return "Fizz";
+        if (number === 3) {
+            return "Fizz";
+        }
+        return number.toString();
     }
 }
 

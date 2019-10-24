@@ -3,7 +3,7 @@ class FizzBuzz {
         if (number % 15 === 0) {
             return "FizzBuzz"
         }
-        if (number === 5 || number === 10 || number === 20) {
+        if (number % 5 === 0) {
             return "Buzz"
         }
         if (number === 3 || number === 6 || number === 9) {

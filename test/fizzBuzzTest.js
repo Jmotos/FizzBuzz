@@ -6,15 +6,11 @@ const chai = require('chai'),
 describe('Unit Test battery of FizzBuzz', () => {
     let fizzBuzz = new FizzBuzz();
 
-    it('when 3 return Fizz', () => {
-        let result = fizzBuzz.run(3),
+    itParam('when ${value} return Fizz', [3, 6, 9], (done, value) => {
+        let result = fizzBuzz.run(value),
             expected = 'Fizz';
         result.should.be.eql(expected);
-    });
-    it('when 6 return Fizz', () => {
-        let result = fizzBuzz.run(6),
-            expected = 'Fizz';
-        result.should.be.eql(expected);
+        done();
     });
     itParam('when ${value} return Buzz', [5, 10, 20], (done, value) => {
         let result = fizzBuzz.run(value),

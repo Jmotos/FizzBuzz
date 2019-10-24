@@ -1,5 +1,6 @@
 const chai = require('chai'),
     should = chai.should(),
+    itParam = require('mocha-param'),
     FizzBuzz = require('../src/fizzBuzz');
 
 describe('Unit Test battery of FizzBuzz', () => {
@@ -10,19 +11,10 @@ describe('Unit Test battery of FizzBuzz', () => {
             expected = 'Fizz';
         result.should.be.eql(expected);
     });
-    it('when 5 return Buzz', () => {
-        let result = fizzBuzz.run(5),
+    itParam('when ${value} return Buzz', [5, 10, 20], (done, value) => {
+        let result = fizzBuzz.run(value),
             expected = 'Buzz';
         result.should.be.eql(expected);
-    });
-    it('when 10 return Buzz', () => {
-        let result = fizzBuzz.run(10),
-            expected = 'Buzz';
-        result.should.be.eql(expected);
-    });
-    it('when 20 return Buzz', () => {
-        let result = fizzBuzz.run(20),
-            expected = 'Buzz';
-        result.should.be.eql(expected);
+        done();
     });
 });

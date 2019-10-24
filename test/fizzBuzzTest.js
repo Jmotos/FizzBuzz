@@ -15,4 +15,9 @@ describe('Unit Test battery of FizzBuzz', () => {
             expected = 'Buzz';
         result.should.be.eql(expected);
     });
+    it('when 10 return Buzz', () => {
+        let result = fizzBuzz.run(10),
+            expected = 'Buzz';
+        result.should.be.eql(expected);
+    });
 });
